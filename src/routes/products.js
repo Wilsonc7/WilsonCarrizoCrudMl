@@ -4,7 +4,7 @@ const router = express.Router();
 
 // ************ Controller Require ************
 const productsController = require('../controllers/productsController');
-const upload = require('../../middlewares/upload');
+const upload = require('../middlewares/upload');
 
 /*** GET ALL PRODUCTS ***/ 
 router.get('/', productsController.index); 
@@ -12,6 +12,7 @@ router.get('/', productsController.index);
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/create', productsController.create); 
 router.post('/create', upload.single('img') , productsController.store); /* clase 60 multer min 01:02:39 */
+
 
 
 /*** GET ONE PRODUCT ***/ 

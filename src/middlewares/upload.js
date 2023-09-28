@@ -1,6 +1,7 @@
 /* clase 60 multer min 00:54:21 */
-const multer = require('multer') 
+const multer = require('multer');
 const path = require('path')
+
 const storage = multer.diskStorage({
     destination: (req,file,cb)=>{
         return cb(null, './public/images/products') 
